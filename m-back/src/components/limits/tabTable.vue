@@ -37,15 +37,22 @@
         </td>
       </tr>
     </table>
+    <div class="ck"></div>
   </div>
 </template>
 
 <script>
+  import $ from "jquery"
     export default {
         name: "tabTable",
       props:["ta"],
       mounted(){
-          // console.log(this.ta.person)
+          $(".bj").click(function () {
+            // alert(5665)
+            $(".ck").fadeToggle(6000,function () {
+              // alert(12)
+            })
+          })
       }
     }
 </script>
@@ -53,8 +60,6 @@
 <style lang="scss" scoped>
   .tab-table{
     width: 100%;
-    /*height: 300px;*/
-    /*background: red;*/
     table{
       width: 100%;
       /*height: 100%;*/
@@ -103,6 +108,15 @@
     .bj{
       padding: 12px 15px;
       margin: 5px ;
+    }
+    .ck{
+      width: 600px;
+      height: 400px;
+      background: #00B7FF;
+      position: fixed;
+      top: 25%;
+      left: 35%;
+      display: none;
     }
   }
 </style>
